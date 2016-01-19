@@ -1,0 +1,57 @@
+{
+  "name": "Stylistic",
+  "version": "0.1.0",
+  "description": "Bootstrap like CSS framework written in Stylus",
+  "main": "./dist/js/npm.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha",
+    "serve": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarginZero/Stylistic.git"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "stylus",
+    "bootstrap",
+    "foundation"
+  ],
+  "author": "Chris Watson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarginZero/Stylistic/issues"
+  },
+  "homepage": "https://github.com/MarginZero/Stylistic#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "copy": "^0.1.3",
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^2.3.1",
+    "gulp-copy": "0.0.2",
+    "gulp-declare": "^0.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylint": "^3.0.0",
+    "gulp-stylus": "^2.2.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-wrap": "^0.11.0",
+    "jade": "^1.11.0",
+    "jstransformer-escape-html": "^1.0.0",
+    "jstransformer-marked": "^1.0.1",
+    "mocha": "^2.3.4",
+    "node-fs-extra": "^0.8.1",
+    "node-static": "^0.7.7",
+    "pryjs": "^0.1.3",
+    "run-sequence": "^1.1.5",
+    "supermarked": "^2.0.0"
+  }
+}

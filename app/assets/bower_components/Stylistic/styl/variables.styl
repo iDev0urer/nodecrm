@@ -1,0 +1,401 @@
+/**
+ *
+ * SOME HELPFUL OPTIONS
+ * at the top for convenience sake
+ *
+ **/
+
+$hover-effects              := true
+$enable-flex                := true
+$enable-grid                := true
+$rounded-corners            := true
+$animations-on              := true
+$enable-hover-media-query   := false
+
+/**
+ *
+ * SPACING
+ *
+ **/
+
+spacer                      := 1rem
+spacer-x                    := spacer
+spacer-y                    := spacer
+spacers := {
+  '0': {
+    x: 0,
+    y: 0
+  },
+  '1': {
+    x: spacer-x,
+    y: spacer-y
+  },
+  '2': {
+    x: (spacer-x * 1.5),
+    y: (spacer-y * 1.5)
+  },
+  '3': {
+    x: (spacer-x * 3),
+    y: (spacer-y * 3)
+  }
+}
+border-width                 := 1px
+
+/**
+ *
+ * COLORS
+ *
+ **/
+
+// Hash of default colors
+colors = {
+  orange: #ED8B00,
+  blue: #448AFF,
+  teal: #009688,
+  yellow: #d0c036,
+  red: #F44336,
+  gray: #9E9E9E
+}
+
+// Loop through the hash and make variables for light and
+// dark variations of the colors
+for name, color in colors
+  define(name + '-light', lighten(color, 25%))
+  define(name + '-lighter', lighten(color, 65%))
+  define(name + '-lightest', lighten(color, 80%))
+  define(name, color)
+  define(name + '-dark', darken(color, 25%))
+  define(name + '-darker', darken(color, 65%))
+  define(name + '-darkest', darken(color, 80%))
+
+// Some bonus colors
+facebook-blue                := #3b5998
+twitter-blue                 := #55acee
+gplus-red                    := #DC4E41
+pinterest-red                := #C92228
+
+/**
+ *
+ * BODY STYLES
+ *
+ **/
+
+body-bg                      := #fff
+body-color                   := gray-darker
+
+
+/**
+ *
+ * LINKS
+ *
+ **/
+
+link-color                   := teal-dark
+link-decoration              := none
+link-hover-color             := teal-darker
+link-hover-decoration        := none
+link-light-color             := #FAFAFA
+
+/**
+ *
+ * GRID BREAKPOINTS
+ *
+ **/
+
+grid-breakpoints := {
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+}
+
+/**
+ *
+ * GRID CONTAINERS
+ *
+ **/
+
+container-max-widths := {
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+  xl: 1140px
+}
+
+/**
+ *
+ * GRID COLUMNS
+ *
+ **/
+
+ grid-columns               := 12
+ grid-gutter-width          := 1.875rem // Or about 30px
+
+ /**
+ *
+ * TYPESETTING
+ *
+ **/
+
+// Set default font families
+font-family-serif           := "Playfair Display", "Times New Roman", Times, serif
+font-family-sans            := "Lato", Helvetica, Arial, sans-serif
+font-family-mono            := "Source Sans Pro", Monaco, Consolas, "Courier New", monospace;
+font-family-base            := font-family-sans;
+
+// Set default font sizes and colors
+font-size-root              := 16px
+
+font-size-base              := 1rem
+font-size-lg                := 1.25rem
+font-size-sm                := .875rem
+font-size-xs                := .75rem
+
+font-size-h1                := 2.5rem
+font-size-h2                := 2rem
+font-size-h3                := 1.75rem
+font-size-h4                := 1.5rem
+font-size-h5                := 1.25rem
+font-size-h6                := 1rem
+
+display1-size               := 4rem
+display1-weight             := 600
+
+display2-size               := 3.5rem
+display2-weight             := 400
+
+display3-size               := 3rem
+display3-weight             := 400
+
+display4-size               := 2.5rem
+display4-weight             := 400
+
+lead-size                   := 1.25rem
+lead-weight                 := 400
+
+line-height                 := 1.5
+line-height-lg              := (4 / 3)
+line-height-sm              := 1.5
+
+headings-margin-bottom       := (spacer / 2)
+headings-font-family         := inherit
+headings-font-weight         := 400
+headings-line-height         := 1.1
+headings-color               := inherit
+
+lead-font-size              := 1.25rem
+lead-font-weight            := 300
+
+text-muted                  := gray
+
+abbr-border-color           := gray-light
+
+blockquote-small-color      := gray-light
+blockquote-font-size        := (font-size-base * 1.25)
+blockquote-border-color     := gray-lighter
+
+hr-border-color             := rgba(0,0,0,.1)
+hr-border-width             := border-width
+
+dt-font-weight              := bold
+nested-kbd-font-weight      := bold
+list-inline-padding         := 5px
+
+/**
+ *
+ * ICON FONTS
+ *
+ **/
+
+icon-font-path              := '../fonts/'
+icon-font-name              := 'ionicons'
+
+/**
+*
+* BORDERS
+*
+**/
+
+border-radius-default       := .25rem
+border-radius-lg            := .3rem
+border-radius-sm            := .2rem
+
+/**
+ *
+ * TABLES
+ *
+ **/
+
+table-cell-padding         := .75rem
+table-sm-cell-padding      := .3rem
+
+table-bg                   := transparent
+table-bg-accent            := #f9f9f9
+table-bg-hover             := #f5f5f5
+table-bg-active            := table-bg-hover
+
+table-border-width         := border-width
+table-border-color         := gray-lighter
+
+/**
+*
+* BUTTONS & LABELS
+*
+**/
+
+btn-padding-x               := 1rem
+btn-padding-y               := .375rem
+btn-font-weight             := normal
+
+btn-color-light             := gray-darker
+btn-color-dark              := #fefefe
+
+btn-link-disabled-color    := gray-light
+
+btn-padding-x-sm           := .75rem
+btn-padding-y-sm           := .25rem
+
+btn-padding-x-lg           := 1.25rem
+btn-padding-y-lg           := .75rem
+
+// Allow customizing of border radius seperately from the global border radius
+btn-border-radius          := border-radius-default
+btn-border-radius-lg       := border-radius-lg
+btn-border-radius-sm       := border-radius-sm
+btn-border-width           := 2px
+
+
+/**
+*
+* FORMS
+*
+**/
+
+input-padding-x                := .75rem
+input-padding-y                := (input-padding-x / 2)
+
+input-bg                       := #FEFEFE
+input-bg-disabled              := gray-lighter
+
+input-color                    := gray
+input-border-color             := gray-lighter
+
+input-btn-border-width         := border-width
+input-box-shadow               := inset 0 1px 1px rgba(0,0,0,.075)
+
+input-border-radius            := border-radius-default
+input-border-radius-lg         := border-radius-lg
+input-border-radius-sm         := border-radius-sm
+
+input-border-focus             := blue-light
+input-box-shadow-focus         := transparentify(blue-light, blue-light, .6)
+
+input-color-placeholder        := #999
+
+input-padding-x-sm           := .75rem
+input-padding-y-sm           := .25rem
+
+input-padding-x-lg           := 1.25rem
+input-padding-y-lg           := .75rem
+
+input-height                     := (font-size-base * line-height) + (input-padding-y * 2)
+input-height-lg                  := (font-size-lg * line-height-lg) + (input-padding-y-lg * 2)
+input-height-sm                  := (font-size-sm * line-height-sm) + (input-padding-y-sm * 2)
+
+form-group-margin-bottom         := spacer-y
+
+input-group-addon-bg             := gray-lighter
+input-group-addon-border-color   := input-border-color
+
+cursor-disabled                  := not-allowed
+
+// Validation icons
+form-icon-success                := b64url('./assets/images/success.svg')
+form-icon-warning                := b64url('./assets/images/warning.svg')
+form-icon-danger                 := b64url('./assets/images/danger.svg')
+
+
+// Form states and alerts
+//
+// Define colors for form feedback states and, by default, alerts.
+
+state-success-text               := #3c763d
+state-success-bg                 := #dff0d8
+state-success-border             := darken(state-success-bg, 5%)
+
+state-info-text                  := #31708f
+state-info-bg                    := #d9edf7
+state-info-border                := darken(state-info-bg, 7%)
+
+state-warning-text               := #8a6d3b
+state-warning-bg                 := #fcf8e3
+state-warning-border             := darken(state-warning-bg, 5%)
+
+state-danger-text                := #a94442
+state-danger-bg                  := #f2dede
+state-danger-border              := darken(state-danger-bg, 5%)
+
+// Navbar
+
+navbar-border-radius             := border-radius
+navbar-padding-horizontal        := spacer
+navbar-padding-vertical          := (spacer / 2)
+
+navbar-dark-bg                   := gray-darkest
+navbar-dark-color                := rgba(255,255,255,.5)
+navbar-dark-hover-color          := rgba(255,255,255,.75)
+navbar-dark-active-color         := rgba(255,255,255,1)
+navbar-dark-disabled-color       := rgba(255,255,255,.25)
+
+navabr-light-bg                  := gray-lightest
+navbar-light-color               := rgba(0,0,0,.3)
+navbar-light-hover-color         := rgba(0,0,0,.6)
+navbar-light-active-color        := rgba(0,0,0,.8)
+navbar-light-disabled-color      := rgba(0,0,0,.15)
+navbar-light-logo-color          := blue-dark
+navbar-dark-logo-color           := gray-lightest
+
+navbar-toggle-color              := gray-darker
+
+// Navs
+
+nav-link-padding                 := .5em 1em
+nav-link-hover-bg                := gray-lighter
+
+nav-disabled-link-color          := gray-light
+nav-disabled-link-hover-color    := gray-light
+
+nav-tabs-border-color            := #ddd
+
+nav-tabs-link-border-width       := border-width
+nav-tabs-link-hover-border-color := gray-lighter
+
+nav-tabs-active-link-hover-bg    := body-bg
+nav-tabs-active-link-hover-color := gray
+nav-tabs-active-link-hover-border-color := #ddd
+
+nav-tabs-justified-link-border-color    := #ddd
+nav-tabs-justified-active-link-border-color := body-bg
+
+nav-pills-border-radius          := border-radius
+nav-pills-active-link-hover-bg   := component-active-bg
+nav-pills-active-link-hover-color:= component-active-color
+
+// CODE
+
+code-light-color                 := gray-dark
+code-light-bg                    := #f7f7f9
+code-dark-color                  := gray-lightest
+code-dark-bg                     := gray-darker
+code-border-radius               := border-radius-default
+
+pre-light-color                 := gray-dark
+pre-light-bg                    := #f7f7f9
+pre-dark-color                  := gray-lightest
+pre-dark-bg                     := gray-darker
+pre-border-radius               := border-radius-default
+
+// ANIMATIONS
+
+transition-duration              := .2s
