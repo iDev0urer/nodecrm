@@ -5,12 +5,12 @@ const express = require('express'),
       passport = require('passport');
 
 /* GET users listing. */
-router.get('/auth/login',
+router.get('/login',
            function(req, res, next) {
-               res.send('respond with a resource');
+               res.send('Login page');
 });
 
-router.post('/auth/login',
+router.post('/login',
          passport.authenticate('local', { failureRedirect: '/auth/login' }),
          function(req, res) {
              res.redirect('/dashboard');
